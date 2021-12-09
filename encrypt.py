@@ -17,7 +17,7 @@ for x in range(h):  # row
 	mapping = {}
 	address = {}
 	
-	for p in range(1,w):  # generate chaotic sequence
+	for p in range(1,w+1):  # generate chaotic sequence
 		chaos.append(u * chaos[p - 1] * (1 - chaos[p - 1]))
 	passwd = chaos.pop()  # Pop out the last one as the password for the next iteration
 
@@ -45,7 +45,7 @@ for x in range(w):  # column
 	mapping = {}
 	address = {}
 
-	for p in range(1, h):
+	for p in range(1, h+1):
 		chaos.append(u * chaos[p - 1] * (1 - chaos[p - 1]))
 	passwd = chaos.pop()
 
