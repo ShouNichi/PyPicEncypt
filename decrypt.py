@@ -16,7 +16,7 @@ u = 3.9999999
 # Calculate password for column decryption
 for x in range(h):
     chaos = [passwd]
-    for p in range(1, w):  # 每行5个,生成混沌序列
+    for p in range(1, w):
         chaos.append(u * chaos[p - 1] * (1 - chaos[p - 1]))
     passwd = chaos.pop()
     del chaos
@@ -27,7 +27,7 @@ for x in range(w):  # Column
     mapping = {}
     address = {}
 
-    for p in range(1, h):
+    for p in range(1, h+1):
         chaos.append(u * chaos[p - 1] * (1 - chaos[p - 1]))
     passwd = chaos.pop()
 
@@ -56,7 +56,7 @@ for x in range(h):  # Row
     mapping = {}
     address = {}
 
-    for p in range(1, w):
+    for p in range(1, w+1):
         chaos.append(u * chaos[p - 1] * (1 - chaos[p - 1]))
     passwd = chaos.pop()
 
