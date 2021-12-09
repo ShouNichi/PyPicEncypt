@@ -8,3 +8,7 @@ A picture encryption tool written in python inspired by the PicEncypt app. Not c
 4.Enjoy!\
 (Why did I type down these???)
 
+## Notes
+I would recommend using png format. If you want to save jpg, remember to manually configure subsamping=0, quality>70.\
+Otherwise the color might worn out due to compression.\
+Also, RGBA could't be written to jpg files.
